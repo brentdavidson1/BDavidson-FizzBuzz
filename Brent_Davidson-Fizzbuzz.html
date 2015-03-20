@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+</head>
+
+<body>
+
+<div>
+	<ul class='list'></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	var array = init();
+	console.log(array);
+
+	$.each(array, function(index, value){
+		$('.list').append('<li>' + value +'</li>');
+	})
+});
+
+
+var init =function(){
+	var fbArrray = [];
+	var x;
+    var y = "";
+
+for (x = 1; x <=100; x++) {
+
+  if ( (x%3) === 0) {	
+      y = "fizz";
+	}
+
+  if ( (x%5) === 0) {
+		y += "buzz";
+	}
+  if (y.length > 0) {
+	fbArrray.push(y);
+  }
+
+}
+
+return fbArrray;
+}
+</script>
+</body>
+</html>
